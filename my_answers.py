@@ -45,8 +45,8 @@ def cleaned_text(text):
     import re
     punctuation = ['!', ',', '.', ':', ';', '?']
     
-    pattern = re.compile('[^a-zA-Z!.?:;,]') # match by negate
-    pattern.sub('', text)
+    pattern = re.compile('[^a-zA-Z!.?:;,\s]') # match by negate
+    text= pattern.sub('', text)
 
     return text
 
